@@ -30,11 +30,11 @@ namespace Test.DataAccess
                 {
                     // Add default user
                     var user1 = new User { Id = new Guid(), UserName = "manager", Password = "test1", Role= "manager" };
-                    var user2 = new User { Id = new Guid(), UserName = "hr", Password = "test2", Role = "manager" };
+                    var user2 = new User { Id = new Guid(), UserName = "hr", Password = "test2", Role = "hr" };
                     if (!context.User.Any())
                     {
                         context.Add(user1);
-                        context.Add(user1);
+                        context.Add(user2);
                         context.SaveChanges();
                     }
                     
