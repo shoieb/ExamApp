@@ -1,0 +1,64 @@
+﻿<h1>{{title}}</h1>
+<h3>Employee</h3>
+
+<hr />
+
+<form [formGroup]="employeeForm" (ngSubmit)="save()" novalidate>
+
+    <div class="form-group row">
+
+        <label class="control-label col-md-12" for="Name">Name</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="name">
+        </div>
+
+        <span class="text-danger" *ngIf="employeeForm.hasError('required', 'name')">
+            Name is required.
+        </span>
+
+    </div>
+
+    <div class="form-group row">
+
+        <label class="control-label col-md-12" for="Name">Email</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="email">
+        </div>
+
+        <span class="text-danger" *ngIf="employeeForm.hasError('required', 'email')">
+            Email is required.
+        </span>
+
+    </div>
+
+    <div class="form-group row">
+
+        <label class="control-label col-md-12" for="Name">Attendance</label>
+        <div class="col-md-4">
+            <select class="form-control" formControlName="attendance">
+                <option [ngValue]="FullDay">Full Day</option>
+                <option [ngValue]="HalfDay">Half Day</option>
+            </select>
+        </div>
+
+        <span class="text-danger" *ngIf="employeeForm.hasError('required', 'attendance')">
+            Attendance is required.
+        </span>
+
+    </div>
+
+    <div class="form-group row">
+
+        <label class="control-label col-md-12" for="Name">Over Time</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="overTime">
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Save</button>
+        <button class="btn" (click)="cancel()">Cancel</button>
+    </div>
+
+</form>  

@@ -1,0 +1,28 @@
+<h1>Employee</h1>
+
+<p *ngIf="!employees"><em>Loading...</em></p>
+<p>
+    <a [routerLink]="['/add-employee']">Create New</a>
+</p>
+<table class='table' *ngIf="employees">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Attendance</th>
+            <th>Over Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.attendance }}</td>
+            <td>{{ employee.overTime }}</td>
+            <td>
+                <a [routerLink]="['/edit-employee/', employee.id]">Edit</a> |
+                <a [routerLink]="" (click)="deleteEmployee(employee.id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

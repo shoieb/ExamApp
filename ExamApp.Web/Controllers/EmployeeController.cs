@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ExamApp.Web.Controllers
 {
+    [Route("api/[controller]/[action]")]
     public class EmployeeController : Controller
     {
         private readonly IEmployeeService _employeeService;
