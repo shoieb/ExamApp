@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExamApp.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -25,6 +26,8 @@ namespace ExamApp.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IDbInitializerService, DbInitializerService>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IEmployeeService, EmployeeService>();
 
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));

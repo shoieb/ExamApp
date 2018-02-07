@@ -30,16 +30,16 @@ namespace Test.Repository
             }
         }
 
-        public CourseRepository _courseRepository;
-        public CourseRepository CourseRepository
+        public EmployeeRepository _employeeRepository;
+        public EmployeeRepository EmployeeRepository
         {
             get
             {
-                if (this._courseRepository == null)
+                if (this._employeeRepository == null)
                 {
-                    this._courseRepository = new CourseRepository(context);
+                    this._employeeRepository = new EmployeeRepository(context);
                 }
-                return _courseRepository;
+                return _employeeRepository;
             }
         }
         //

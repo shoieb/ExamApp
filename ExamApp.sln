@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.DataAccess", "ExamA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.Repository", "ExamApp.Repository\ExamApp.Repository.csproj", "{B5C644CF-DC4F-498E-B193-E1B85D32136B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.Service", "ExamApp.Service\ExamApp.Service.csproj", "{C0483000-A8B6-43AE-9942-A866237638E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B5C644CF-DC4F-498E-B193-E1B85D32136B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5C644CF-DC4F-498E-B193-E1B85D32136B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5C644CF-DC4F-498E-B193-E1B85D32136B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0483000-A8B6-43AE-9942-A866237638E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0483000-A8B6-43AE-9942-A866237638E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0483000-A8B6-43AE-9942-A866237638E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0483000-A8B6-43AE-9942-A866237638E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
