@@ -35,10 +35,7 @@
 
         <label class="control-label col-md-12" for="Name">Attendance</label>
         <div class="col-md-4">
-            <select class="form-control" formControlName="attendance">
-                <option [ngValue]="FullDay">Full Day</option>
-                <option [ngValue]="HalfDay">Half Day</option>
-            </select>
+            <input class="form-control" type="text" formControlName="attendance">
         </div>
 
         <span class="text-danger" *ngIf="employeeForm.hasError('required', 'attendance')">

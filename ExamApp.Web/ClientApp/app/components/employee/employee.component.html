@@ -1,7 +1,7 @@
 <h1>Employee</h1>
 
 <p *ngIf="!employees"><em>Loading...</em></p>
-<p>
+<p *ngIf="isManager">
     <a [routerLink]="['/add-employee']">Create New</a>
 </p>
 <table class='table' *ngIf="employees">
@@ -21,7 +21,7 @@
             <td>{{ employee.overTime }}</td>
             <td>
                 <a [routerLink]="['/edit-employee/', employee.id]">Edit</a> |
-                <a [routerLink]="" (click)="deleteEmployee(employee.id)">Delete</a>
+                <a [routerLink]="" (click)="deleteEmployee(employee.id)" *ngIf="isManager">Delete</a>
             </td>
         </tr>
     </tbody>

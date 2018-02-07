@@ -16,31 +16,18 @@ namespace ExamApp.Web.Controllers
         {
             _userService = userService;
         }
-        [HttpGet]
-        public IEnumerable<User> GetAll()
-        {
-            var allUser = _userService.GetAll();
-            return allUser;
-        }
-        [HttpGet("{id}")]
-        public User GetById(Guid id)
-        {
-            var user = _userService.Find(id);
-            return user;
-        }
-
         [HttpPost]
-        public IActionResult InsertOrUpdate([FromBody]User user)
+        public IActionResult GetUser([FromBody]User user)
         {
-            _userService.Save(user);
-            return Ok(user);
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult DeleteCourse(Guid id)
-        {
-            _userService.Delete(id);
-            return Ok(id);
+            try
+            {
+                var foundUser = _userService.FindUser(user);
+                return Ok(foundUser);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

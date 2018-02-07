@@ -9,7 +9,9 @@ using Test.Service.Interface;
 namespace ExamApp.Service
 {
     public interface IUserService : IService<User>
-    { }
+    {
+        User FindUser(User user);
+    }
     public class UserService : IUserService
     {
         private readonly UnitOfWork unit;
@@ -38,6 +40,11 @@ namespace ExamApp.Service
         public User Find(Guid id)
         {
             return unit.UserRepository.Find(id);
+        }
+
+        public User FindUser(User user)
+        {
+            return unit.UserRepository.GetAll().Find(u => u.UserName == user.UserName && u.Password == user.Password);
         }
     }
 }
