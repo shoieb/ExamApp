@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamApp.Web", "ExamApp.Web\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.Domain", "ExamApp.Domain\ExamApp.Domain.csproj", "{B88F378D-9614-41BA-93C2-821971F47F3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.DataAccess", "ExamApp.DataAccess\ExamApp.DataAccess.csproj", "{0DE4FECC-D763-4BBE-93BE-EED6D8CBA789}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B88F378D-9614-41BA-93C2-821971F47F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B88F378D-9614-41BA-93C2-821971F47F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B88F378D-9614-41BA-93C2-821971F47F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE4FECC-D763-4BBE-93BE-EED6D8CBA789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE4FECC-D763-4BBE-93BE-EED6D8CBA789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE4FECC-D763-4BBE-93BE-EED6D8CBA789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE4FECC-D763-4BBE-93BE-EED6D8CBA789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
